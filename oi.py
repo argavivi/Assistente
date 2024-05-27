@@ -4,6 +4,7 @@ import datetime
 import wikipedia
 import pywhatkit
 import os
+import ai_code
 
 audio = sr.Recognizer()
 maquina = pyttsx3.init()
@@ -80,8 +81,7 @@ def comando_voz_usuario():
         maquina.say('estou saindo')
         os.system('exit' if os.name == 'nt' else 'quit')
         maquina.runAndWait()
-    elif 'caneca' in comando:
-        os.system('start cup.bat')
+    elif 'conversar' in comando:
         maquina.say('abrindo cuphead')
         maquina.runAndWait()
     else :
